@@ -9,6 +9,7 @@ jobs:
   build_and_publish:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         ghidra: [ "10.3", "10.2.2", "10.2.1", "10.2" ]
     steps:
