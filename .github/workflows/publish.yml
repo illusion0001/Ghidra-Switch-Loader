@@ -25,3 +25,9 @@ jobs:
         with:
           # gradle-version: 7.0
           arguments: -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Ghidra-Switch-Loader_${{ matrix.ghidra }}
+          path: dist/*.zip
